@@ -11,6 +11,12 @@
     <div ng-controller='ExprController'>
       {{name}} has this message for you: <br/>
       {{sayMessage()}}
+      <div>
+         <button ng-click="testButtonAction();">Press me</button>
+         <br/>
+         {{imageSelector}}
+         <img ng-src="images/testimg_{{imageSelector}}.jpg"></img> <!-- ng-src is used instead of just src to tell angujar only load the image when it's ready -->
+      </div>
     </div>
   </body>
 </html>
