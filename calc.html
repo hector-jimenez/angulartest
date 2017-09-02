@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="calcApp.js"></script>
+    <title>Angular JS App</title>
+  </head>
+  <body  ng-app="CalcApp"> <!-- now declare the app here, bind here so it's controlling everything inside the body html -->
+    <h1>Name Calculator</h1>
+    <div ng-controller="CalcController">
+        Your Name: <input type="text" ng-model="name" ng-keyup="displayNumeric();"> <!-- binds the html event for keypressed to a function in the viewmodel (controller) and at the same time the name property -->
+        <div>Total numeric value of person's name is: {{totalValue}}</div> <!-- reference to the controller's property -->
+    </div>
+  </body>
+</html>

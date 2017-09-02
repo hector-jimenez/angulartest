@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="testApp">
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
@@ -7,8 +7,12 @@
     <title>Angular JS App</title>
   </head>
   <body>
-    <div class="">
-
+    <h1>Angular JS Test page</h1>
+    <div ng-controller="Controller1">
+      Some examples:<br/><br/>
+        {{testFunction()}} <br/> <!-- this is a reference to a function from the controller bound from the modelView -->
+        <input type="text" ng-model="name"> <!-- declarative bind of html to the scope of the controller, binding the value in the scope to the html -->
+        Inside the input is: {{name}} <br/> <!-- this is a reference (bind) to the value of a property from the controller in the modelView -->
     </div>
   </body>
 </html>
