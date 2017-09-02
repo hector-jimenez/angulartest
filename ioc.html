@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="IocApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="iocApp.js"></script>
+    <title>Angular JS App</title>
+  </head>
+  <body>
+    <h1>Angular JS Test page</h1>
+    <div ng-controller="IocController">
+      <input type="text" ng-model="name" ng-blur="upper();"> <!-- ng-blur is event that triggers when input looses focus and it will call the $filter service (function that converts or formats the name property in the controller) -->
+    </div>
+  </body>
+</html>
